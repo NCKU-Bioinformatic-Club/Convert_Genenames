@@ -25,3 +25,8 @@ Cut2 <- AnnotationDbi::select(org.Hs.eg.db, keys=CutName, columns='SYMBOL', keyt
 
 CutNew <- cbind(Cut2,Cut)
 
+# Export data
+# https://joe11051105.gitbooks.io/r_basic/content/data_import_and_export/export_data.html
+write.table(CutNew, file = paste0(FilesName,"/CutNew.txt"))
+
+#CutNewTTT <- read.table(paste0(FilesName,"/CutNew.txt"))
