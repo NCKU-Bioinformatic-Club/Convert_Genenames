@@ -49,7 +49,7 @@ AnnotationDbi::select(org.Mm.eg.db, keys=TTT1, columns='ENTREZID', keytype='SYMB
 
 #Test
 symbols2 <- c('Top2a','Top2b')
-AnnotationDbi::select(org.Mm.eg.db, keys=symbols2, columns='ENSEMBL', keytype='SYMBOL')
+AnnotationDbi::select(org.Mm.eg.db, keys=symbols2, columns=c('ENTREZID','ENSEMBL','REFSEQ'), keytype='SYMBOL')
 #Test
 
 #老鼠的基因名要小寫= =...
