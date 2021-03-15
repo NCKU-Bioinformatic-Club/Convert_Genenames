@@ -20,7 +20,6 @@ FilesName <- getwd() ## Set output directroy
 
 Cut <- read.table(paste0(FilesName,"/cut.txt"))
 CutName  <- as.vector(rownames(Cut))
-CutName  <-NM_001003806
 Cut2 <- AnnotationDbi::select(org.Hs.eg.db, keys=CutName, columns='SYMBOL', keytype='REFSEQ') 
 
 CutNew <- cbind(Cut2,Cut)
